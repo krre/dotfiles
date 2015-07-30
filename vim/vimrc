@@ -4,3 +4,7 @@ set number
 set nocompatible
 language mes en
 
+nmap <C-F12> :e $MYVIMRC<cr>
+nmap <C-s> :w<cr>
+nmap <C-q> :q<cr>
+
