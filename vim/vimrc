@@ -1,5 +1,6 @@
 colorscheme molokai
 set cursorline
 set number
-
+set nocompatible
 language mes en
+
