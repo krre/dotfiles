@@ -1,2 +1,4 @@
 set guioptions-=T
 set langmenu=en_US.UTF-8
+winsize 160 44
+
