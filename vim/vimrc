@@ -2,13 +2,10 @@ colorscheme molokai
 set cursorline
 set number
 set nocompatible
-language mes en
 
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
 nmap <C-F12> :e $MYVIMRC<cr>
-nmap <C-s> :w<cr>
-nmap <C-q> :q<cr>
 
