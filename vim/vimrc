@@ -8,4 +8,6 @@ syntax on
 filetype plugin indent on
 
 nmap <C-F12> :e $MYVIMRC<cr>
+nmap <F12> :qa!<cr>
+nmap <F2> :w<cr>
 
