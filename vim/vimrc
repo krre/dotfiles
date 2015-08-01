@@ -11,6 +11,7 @@ let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
 
 nmap <C-F12> :e $MYVIMRC<cr>
+nmap <F10> :NERDTreeToggle<cr>
 nmap <F12> :qa!<cr>
 nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
