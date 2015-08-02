@@ -12,6 +12,7 @@ let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
 
 nmap <C-A-F12> :e $MYVIMRC<cr>
+nmap <C-A-F11> :e $MYGVIMRC<cr>
 nmap <F10> :NERDTreeToggle<cr>
 nmap <F12> :qa!<cr>
 nmap <c-s> :w<cr>
