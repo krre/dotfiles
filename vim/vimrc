@@ -24,3 +24,7 @@ if has ('autocmd')
 	autocmd GUIEnter * set visualbell t_vb=
 endif
 
+if has('win32')
+	set makeprg=mingw32-make
+endif
+
