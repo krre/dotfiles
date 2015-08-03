@@ -13,6 +13,7 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set showcmd "show pressed keys in normal mode
 
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
