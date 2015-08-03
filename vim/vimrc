@@ -10,6 +10,9 @@ set nocompatible
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
@@ -25,10 +28,10 @@ map <F9> :make<cr>
 
 set noerrorbells visualbell t_vb=
 if has ('autocmd')
-	autocmd GUIEnter * set visualbell t_vb=
+    autocmd GUIEnter * set visualbell t_vb=
 endif
 
 if has('win32')
-	set makeprg=mingw32-make
+    set makeprg=mingw32-make
 endif
 
