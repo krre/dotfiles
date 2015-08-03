@@ -1,4 +1,7 @@
-language English_United States
+if has('win32')
+    language English_United States
+endif
+
 colorscheme molokai
 set cursorline
 set number
