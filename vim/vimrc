@@ -19,6 +19,7 @@ let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
 
 let NERDTreeShowBookmarks=1
+let g:C_UseTool_cmake = 'yes'
 
 nmap <C-F12> :e $MYVIMRC<cr>
 nmap <C-F11> :e $MYGVIMRC<cr>
