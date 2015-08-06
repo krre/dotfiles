@@ -14,7 +14,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set showcmd "show pressed keys in normal mode
-set sessionoptions+=resize,winpos
+set lines=999
+set columns=999
 
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
@@ -25,6 +26,7 @@ let g:C_UseTool_cmake = 'yes'
 nmap <C-F12> :e $MYVIMRC<cr>
 nmap <C-F11> :e $MYGVIMRC<cr>
 nmap <F10> :NERDTreeToggle<cr>
+imap <c-q> <esc>:qa!<cr>
 nmap <c-q> :qa!<cr>
 nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
