@@ -28,10 +28,16 @@ nmap <C-F11> :e $MYGVIMRC<cr>
 nmap <F10> :NERDTreeToggle<cr>
 imap <c-q> <esc>:qa!<cr>
 nmap <c-q> :qa!<cr>
+imap <c-q> <esc>:qa!<cr>
 nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
 inoremap jj <esc>
-map <F9> :make<cr>
+map <F9> :CMake install<cr>
+
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
 set noerrorbells visualbell t_vb=
 if has ('autocmd')
