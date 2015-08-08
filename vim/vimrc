@@ -21,20 +21,17 @@ set backspace=indent,eol,start
 
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
-
-let NERDTreeShowBookmarks=1
 let g:C_UseTool_cmake = 'yes'
+let NERDTreeShowBookmarks=1
 
 nmap <C-F12> :e $MYVIMRC<cr>
 nmap <C-F11> :e $MYGVIMRC<cr>
 nmap <F10> :NERDTreeToggle<cr>
 imap <c-q> <esc>:qa!<cr>
 nmap <c-q> :qa!<cr>
-imap <c-q> <esc>:qa!<cr>
 nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
-inoremap jj <esc>
-map <F9> :CMake install<cr>
+map <F9> :CMake -j install<cr>
 
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
