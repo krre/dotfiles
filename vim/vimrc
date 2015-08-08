@@ -46,6 +46,8 @@ endif
 
 if has('win32')
     set makeprg=mingw32-make
+    let g:CMake_Executable = 'cmake.exe'
+    let g:CMake_MakeTool = 'mingw32-make.exe'
 endif
 
 " remove tailing space on save any file
