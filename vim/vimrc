@@ -10,12 +10,14 @@ set nocompatible
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set showcmd "show pressed keys in normal mode
 set lines=999
 set columns=999
+set backspace=indent,eol,start
 
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
