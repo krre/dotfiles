@@ -21,7 +21,6 @@ set sessionoptions+=resize,winpos
 
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
-let g:session_menu = 0
 let g:C_UseTool_cmake = 'yes'
 let NERDTreeShowBookmarks=1
 
