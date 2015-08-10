@@ -15,8 +15,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set showcmd "show pressed keys in normal mode
-set lines=999
-set columns=999
 set backspace=indent,eol,start
 set foldmethod=syntax
 
