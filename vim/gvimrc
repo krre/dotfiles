@@ -3,6 +3,8 @@ set guioptions-=m
 set guioptions-=r
 set guioptions-=L
 set langmenu=en_US.UTF-8
+winsize 160 44
+winpos 100 100
 
 if has("gui_running")
     if has("gui_win32")

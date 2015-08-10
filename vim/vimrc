@@ -17,9 +17,11 @@ set expandtab
 set showcmd "show pressed keys in normal mode
 set backspace=indent,eol,start
 set foldmethod=syntax
+set sessionoptions+=resize,winpos
 
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
+let g:session_menu = 0
 let g:C_UseTool_cmake = 'yes'
 let NERDTreeShowBookmarks=1
 
