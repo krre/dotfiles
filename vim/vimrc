@@ -17,6 +17,7 @@ set expandtab
 set showcmd "show pressed keys in normal mode
 set backspace=indent,eol,start
 set foldmethod=syntax
+set foldlevelstart=20
 set sessionoptions+=resize,winpos
 set cindent
 
