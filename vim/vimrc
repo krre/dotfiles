@@ -23,7 +23,6 @@ set cindent
 
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
-let g:C_UseTool_cmake = 'yes'
 let NERDTreeShowBookmarks=1
 
 nmap <C-F12> :e $MYVIMRC<cr>
