@@ -33,8 +33,8 @@ imap <c-q> <esc>:qa!<cr>
 nmap <c-q> :qa!<cr>
 nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
-map <F9> :CMake -j install<cr>
-"swith cpp header/source
+map <F9> :make -j9 install<cr>
+" swith cpp header/source
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 nmap <silent> <A-Up> :wincmd k<CR>
@@ -49,8 +49,6 @@ endif
 
 if has('win32')
     set makeprg=mingw32-make
-    let g:CMake_Executable = 'cmake.exe'
-    let g:CMake_MakeTool = 'mingw32-make.exe'
 endif
 
 " remove tailing space on save any file
