@@ -24,6 +24,7 @@ set cindent
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
 let NERDTreeShowBookmarks=1
+let g:neocomplete#enable_at_startup = 1
 
 nmap <C-F12> :e $MYVIMRC<cr>
 nmap <C-F11> :e $MYGVIMRC<cr>
