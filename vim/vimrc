@@ -18,6 +18,7 @@ set showcmd "show pressed keys in normal mode
 set backspace=indent,eol,start
 set foldmethod=syntax
 set sessionoptions+=resize,winpos
+set cindent
 
 let g:session_autoload = 'yes'
 let g:session_autosave = 'yes'
