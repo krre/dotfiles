@@ -1,2 +1,2 @@
 # Vim
-ln -sv ~/dotfiles/vim ~/.vim
+ln -sv ~/work/dotfiles/vim ~/.vim
