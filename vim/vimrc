@@ -34,7 +34,7 @@ nmap <c-q> :qa!<cr>
 nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
 map <F9> :make -j9 install<cr>
-" swith cpp header/source
+" Swith cpp header/source
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 nmap <silent> <A-Up> :wincmd k<CR>
@@ -51,7 +51,7 @@ if has('win32')
     set makeprg=mingw32-make
 endif
 
-" remove tailing space on save any file
+" Remove tailing space on save any file
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
