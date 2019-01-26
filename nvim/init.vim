@@ -40,3 +40,6 @@ call plug#end()
 
 let dart_format_on_save = 1
 
+au FocusGained, BufEnter * :silent! !
+au FocusLost, WinLeave * :silent! w
+
