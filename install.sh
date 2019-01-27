@@ -1,4 +1,3 @@
-# Vim
-ln -sv ~/work/dotfiles/vim ~/.vim
-ln -sv ~/work/dotfiles/nvim ~/.config
-ln -s ~/work/dotfiles/tmux/.tmux.conf ~/
+ln -svr vim ~/.vim
+ln -svr nvim ~/.config
+ln -svr tmux/.tmux.conf ~/
