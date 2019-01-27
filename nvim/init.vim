@@ -39,6 +39,7 @@ Plug 'dart-lang/dart-vim-plugin'
 call plug#end()
 
 let dart_format_on_save = 1
+let g:NERDTreeWinSize=50
 
 au FocusGained, BufEnter * :silent! !
 au FocusLost, WinLeave * :silent! w
