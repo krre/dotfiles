@@ -27,7 +27,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'fatih/vim-go', { 'tag': '*' }
+Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
@@ -40,6 +40,7 @@ call plug#end()
 
 let dart_format_on_save = 1
 let g:NERDTreeWinSize=50
+let g:NERDTreeShowBookmarks=1
 
 au FocusGained, BufEnter * :silent! !
 au FocusLost, WinLeave * :silent! w
