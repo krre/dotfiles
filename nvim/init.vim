@@ -4,6 +4,8 @@ set termguicolors
 set clipboard+=unnamedplus
 colorscheme desert
 
+let mapleader = ","
+
 nmap <C-F12> :e $MYVIMRC<cr>
 " Same as C-F12. Need to fix Neovim bug:
 " Ctrl/Shift + function keys mappings do not work #7384
