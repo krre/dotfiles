@@ -29,7 +29,6 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'fatih/vim-go', { 'tag': '*', 'do': ':GoUpdateBinaries' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
