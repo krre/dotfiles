@@ -35,7 +35,6 @@ Plug 'gregsexton/gitv', {'on': ['Gitv']}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'vim-airline/vim-airline'
 Plug 'mileszs/ack.vim'
-Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
 
