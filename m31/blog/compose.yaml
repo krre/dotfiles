@@ -1,5 +1,6 @@
 services:
   blog-api:
+    container_name: blog-api
     image: krre/blog-api:1.0
     ports:
       - 127.0.0.1:4010:3000
@@ -10,6 +11,7 @@ services:
       - RUST_LOG=info
 
   blog-web:
+    container_name: blog-web
     image: krre/blog-web:1.0
     ports:
       - 127.0.0.1:3010:3000
