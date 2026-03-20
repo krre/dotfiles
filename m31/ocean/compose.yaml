@@ -9,5 +9,12 @@ services:
       - RUST_LOG=info
     ports:
       - 127.0.0.1:4000:3000
+    networks:
+      - pg_network
     volumes:
       - ./config:/etc/ocean
+
+networks:
+  pg_network:
+    external: true
+    name: pg_network

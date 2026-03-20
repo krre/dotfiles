@@ -1,0 +1,24 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:18.3
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD
+      - OCEAN_PASSWORD
+      - BLOG_PASSWORD
+    ports:
+      - ${PORT}:5432
+    networks:
+      - pg_network
+    volumes:
+      - db:/var/lib/postgresql
+      - ./init-db:/docker-entrypoint-initdb.d
+
+networks:
+  pg_network:
+    name: pg_network
+    driver: bridge
+
+volumes:
+  db:
