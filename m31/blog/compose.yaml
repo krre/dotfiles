@@ -16,8 +16,8 @@ services:
     image: krre/blog-web:1.0
     restart: always
     environment:
-      - PORT=3000
       - HOST=0.0.0.0
+      - PORT=3000
       - NODE_ENV=production
 
 networks:
