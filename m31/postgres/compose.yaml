@@ -10,15 +10,14 @@ services:
     ports:
       - ${PORT}:5432
     networks:
-      - pg_network
+      - postgres
     volumes:
       - db:/var/lib/postgresql
       - ./init-db:/docker-entrypoint-initdb.d
 
 networks:
-  pg_network:
-    name: pg_network
-    driver: bridge
+  postgres:
+    name: postgres
 
 volumes:
   db:

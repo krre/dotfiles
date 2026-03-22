@@ -8,8 +8,8 @@ services:
       - PORT=3000
       - RUST_LOG=info
     networks:
-      - pg_network
-      - blog_network
+      - postgres
+      - blog
 
   blog-web:
     container_name: blog-web
@@ -20,13 +20,13 @@ services:
       - PORT=3000
       - NODE_ENV=production
     networks:
-    - blog_network
-    - caddy_network
+    - blog
+    - caddy
 
 networks:
-  pg_network:
+  postgres:
     external: true
-  caddy_network:
+  caddy:
     external: true
-  blog_network:
-    name: blog_network
+  blog:
+    name: blog

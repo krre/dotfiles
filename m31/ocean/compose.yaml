@@ -8,8 +8,8 @@ services:
       - PORT=3000
       - RUST_LOG=info
     networks:
-      - pg_network
-      - ocean_network
+      - postgres
+      - ocean
     volumes:
       - ./config:/etc/ocean
 
@@ -23,18 +23,18 @@ services:
       - ADDRESS_HEADER=x-forwarded-for
       - NODE_ENV=production
     networks:
-      - ocean_network
-      - caddy_network
+      - ocean
+      - caddy
     volumes:
       - sessions:/app/.sessions
 
 networks:
-  pg_network:
+  postgres:
     external: true
-  caddy_network:
+  caddy:
     external: true
-  ocean_network:
-    name: ocean_network
+  ocean:
+    name: ocean
 
 volumes:
   sessions:
