@@ -1,0 +1,22 @@
+(common_log) {
+	log {
+		output stdout
+		format console {
+			time_format "iso8601"
+		}
+	}
+}
+
+m31.one, www.m31.one {
+	abort
+}
+
+localhost, ocean-mandela.info, ocean.m31.one {
+	reverse_proxy ocean-web:3000
+	import common_log
+}
+
+blog.m31.one {
+	reverse_proxy blog-web:3000
+	import common_log
+}
