@@ -2,19 +2,28 @@ services:
   blog-api:
     container_name: blog-api
     image: krre/blog-api:1.0
-    ports:
-      - 127.0.0.1:4010:3000
     restart: always
     environment:
       - HOST=0.0.0.0
       - PORT=3000
       - RUST_LOG=info
+    networks:
+      - pg_network
+      - blog_network
 
   blog-web:
     container_name: blog-web
     image: krre/blog-web:1.0
-    ports:
-      - 127.0.0.1:3010:3000
     restart: always
     environment:
+      - PORT=3000
+      - HOST=0.0.0.0
       - NODE_ENV=production
+
+networks:
+  pg_network:
+    external: true
+  caddy_network:
+    external: true
+  blog_network:
+    name: blog_network
