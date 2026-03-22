@@ -7,14 +7,34 @@ services:
       - HOST=0.0.0.0
       - PORT=3000
       - RUST_LOG=info
-    ports:
-      - 127.0.0.1:4000:3000
     networks:
       - pg_network
+      - ocean_network
     volumes:
       - ./config:/etc/ocean
+
+  ocean-web:
+    container_name: ocean-web
+    image: krre/ocean-web:1.0
+    restart: always
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+      - ADDRESS_HEADER=x-forwarded-for
+      - NODE_ENV=production
+    networks:
+      - ocean_network
+      - caddy_network
+    volumes:
+      - sessions:/app/.sessions
 
 networks:
   pg_network:
     external: true
-    name: pg_network
+  caddy_network:
+    external: true
+  ocean_network:
+    name: ocean_network
+
+volumes:
+  sessions:
