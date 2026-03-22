@@ -18,8 +18,8 @@ services:
     image: krre/ocean-web:1.0
     restart: always
     environment:
-      - PORT=3000
       - HOST=0.0.0.0
+      - PORT=3000
       - ADDRESS_HEADER=x-forwarded-for
       - NODE_ENV=production
     networks:
