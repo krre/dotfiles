@@ -4,8 +4,7 @@ services:
     image: krre/blog-api:1.0
     restart: always
     environment:
-      - HOST=0.0.0.0
-      - PORT=3000
+      - SERVER_ADDR=0.0.0.0:3000
       - RUST_LOG=info
     networks:
       - postgres
