@@ -4,14 +4,25 @@ services:
     image: krre/ocean-api:1.0
     restart: always
     environment:
-      - HOST=0.0.0.0
-      - PORT=3000
+      - SERVER_ADDR=0.0.0.0:3000
+      - POSTGRES_URL
+
+      - ANONYM_ALLOWED
+      - FRONTEND_DOMEN
+
+      - TELEGRAM_BOT_URL
+      - TELEGRAM_BOT_TOKEN
+      - TELEGRAM_BOT_CHANNEL
+      - TELEGRAM_BOT_ADMIN_CHAT_ID
+      - TELEGRAM_BOT_ENABLED
+
+      - WATCHDOG_ANONYM_TOKEN
+      - WATCHDOG_ENABLED
+
       - RUST_LOG=info
     networks:
       - postgres
       - ocean
-    volumes:
-      - ./config:/etc/ocean
 
   ocean-web:
     container_name: ocean-web
