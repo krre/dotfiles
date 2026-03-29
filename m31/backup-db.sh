@@ -8,6 +8,6 @@ DB_CONTAINER="postgres"
 DB_USER="postgres"
 DB_NAME="ocean"
 
-docker exec $DB_CONTAINER pg_dump -U $DB_USER $DB_NAME | gzip > "$BACKUP_DIR/dump_$DATE.sql.gz"
+docker exec $DB_CONTAINER pg_dump -U $DB_USER $DB_NAME | gzip > "$BACKUP_DIR/$DB_NAME.$DATE.sql.gz"
 
 find "$BACKUP_DIR" -type f -mtime +30 -name "*.sql.gz" -delete
