@@ -1,7 +1,7 @@
 services:
   blog-api:
     container_name: blog-api
-    image: krre/blog-api:1.0
+    image: krre/blog-api:latest
     restart: always
     environment:
       - SERVER_ADDR=0.0.0.0:3000
@@ -12,7 +12,7 @@ services:
 
   blog-web:
     container_name: blog-web
-    image: krre/blog-web:1.0
+    image: krre/blog-web:latest
     restart: always
     environment:
       - HOST=0.0.0.0
