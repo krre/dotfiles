@@ -1,7 +1,7 @@
 services:
   ocean-api:
     container_name: ocean-api
-    image: krre/ocean-api:1.0
+    image: krre/ocean-api:latest
     restart: always
     environment:
       - SERVER_ADDR=0.0.0.0:3000
@@ -26,7 +26,7 @@ services:
 
   ocean-web:
     container_name: ocean-web
-    image: krre/ocean-web:1.0
+    image: krre/ocean-web:latest
     restart: always
     environment:
       - HOST=0.0.0.0
