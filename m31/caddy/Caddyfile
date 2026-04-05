@@ -25,7 +25,7 @@ ocean-mandela.info, ocean.m31.one {
 	import ocean_web
 }
 
-ocean.m31.test {
+ocean.m31.local {
 	import ocean_web
 	tls internal
 }
@@ -34,7 +34,7 @@ blog.m31.one {
 	import blog_web
 }
 
-blog.m31.test {
+blog.m31.local {
 	import blog_web
 	tls internal
 }
