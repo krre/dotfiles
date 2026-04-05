@@ -2,8 +2,10 @@ services:
    loki:
       container_name: loki
       image: grafana/loki:3.6.10
-      ports:
-         - 3100:3100
+      # ports:
+      #    - 3100:3100
+      networks:
+         - grafana
       volumes:
          - ./loki-config.yaml:/etc/loki/local-config.yaml
       command: -config.file=/etc/loki/local-config.yaml
@@ -13,8 +15,10 @@ services:
       command:
          - --web.enable-remote-write-receiver
          - --config.file=/etc/prometheus/prometheus.yml
-      ports:
-         - 9090:9090
+      # ports:
+      #    - 9090:9090
+      networks:
+         - grafana
    grafana:
       container_name: grafana
       image: grafana/grafana:12.4.2
@@ -22,8 +26,11 @@ services:
          - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
          - GF_AUTH_ANONYMOUS_ENABLED=true
          - GF_AUTH_BASIC_ENABLED=false
-      ports:
-         - 3000:3000/tcp
+      # ports:
+      #    - 3000:3000/tcp
+      networks:
+         - caddy
+         - grafana
       entrypoint:
          - sh
          - -euc
@@ -56,10 +63,13 @@ services:
       container_name: alloy
       image: grafana/alloy:v1.15.0
       privileged: true
-      ports:
-         - 12345:12345
-         - 4317:4317
-         - 4318:4318
+      # ports:
+      #    - 12345:12345
+      #    - 4317:4317
+      #    - 4318:4318
+      networks:
+         - caddy
+         - grafana
       environment:
          ALLOY_DEPLOY_MODE: docker
       volumes:
@@ -75,3 +85,9 @@ services:
          - "host.docker.internal:host-gateway"
       devices:
          - /dev/kmsg
+
+networks:
+   caddy:
+      external: true
+   grafana:
+      name: grafana
