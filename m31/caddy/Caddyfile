@@ -7,16 +7,34 @@
 	}
 }
 
-m31.one, www.m31.one {
-	abort
-}
-
-localhost, ocean-mandela.info, ocean.m31.one {
+(ocean_web) {
 	reverse_proxy ocean-web:3000
 	import common_log
 }
 
-blog.m31.one {
+(blog_web) {
 	reverse_proxy blog-web:3000
 	import common_log
+}
+
+m31.one, www.m31.one {
+	abort
+}
+
+ocean-mandela.info, ocean.m31.one {
+	import ocean_web
+}
+
+ocean.m31.test {
+	import ocean_web
+	tls internal
+}
+
+blog.m31.one {
+	import blog_web
+}
+
+blog.m31.test {
+	import blog_web
+	tls internal
 }
