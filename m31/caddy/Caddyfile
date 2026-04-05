@@ -7,16 +7,6 @@
 	}
 }
 
-(ocean_web) {
-	reverse_proxy ocean-web:3000
-	import common_log
-}
-
-(blog_web) {
-	reverse_proxy blog-web:3000
-	import common_log
-}
-
 (caddy_auth) {
 	basic_auth {
 		{$USER} {$PASSWORD_HASH}
@@ -27,22 +17,14 @@ m31.one, www.m31.one {
 	abort
 }
 
-ocean-mandela.info, ocean.m31.one {
-	import ocean_web
+ocean-mandela.info, ocean.m31.one, ocean.m31.local {
+	import common_log
+	reverse_proxy ocean-web:3000
 }
 
-ocean.m31.local {
-	import ocean_web
-	tls internal
-}
-
-blog.m31.one {
-	import blog_web
-}
-
-blog.m31.local {
-	import blog_web
-	tls internal
+blog.m31.one, blog.m31.local {
+	import common_log
+	reverse_proxy blog-web:3000
 }
 
 grafana.m31.one, grafana.m31.local {
