@@ -5,6 +5,7 @@ services:
     restart: always
     environment:
       - SERVER_ADDR=0.0.0.0:3000
+      - DATABASE_URL
       - RUST_LOG=info
     networks:
       - postgres
