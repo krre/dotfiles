@@ -6,6 +6,7 @@ services:
     environment:
       - SERVER_ADDR=0.0.0.0:3000
       - DATABASE_URL
+      - JWT_SECRET
       - RUST_LOG=info
     networks:
       - postgres
@@ -20,8 +21,8 @@ services:
       - PORT=3000
       - NODE_ENV=production
     networks:
-    - blog
-    - caddy
+      - blog
+      - caddy
 
 networks:
   postgres:
