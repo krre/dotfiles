@@ -23,6 +23,8 @@ services:
     networks:
       - blog
       - caddy
+    volumes:
+      - ${UPLOAD_DIR}:/usr/src/app/upload
 
 networks:
   postgres:
